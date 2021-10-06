@@ -55,7 +55,7 @@ export const Bio = () => {
   return (
     <Content>
       <Avatar
-        fixed={data.avatar.childImageSharp.fixed}
+        // fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         imgStyle={{ borderRadius: "50%" }}
       />

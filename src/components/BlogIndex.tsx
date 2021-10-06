@@ -1,22 +1,38 @@
 import { graphql, PageRendererProps, useStaticQuery } from "gatsby"
 import React from "react"
-import * as ReactDOM from "react-dom";
 import styled from "styled-components"
-import { Bio } from "../components/bio"
-import { Layout } from "../components/layout"
-import { FadeLink } from "../components/link"
-import { SEO } from "../components/seo"
-import SuperWeb3 from "../components/SuperWeb3"
+import { Bio } from "./bio"
+import { Layout } from "./layout"
 import { MarkdownRemark } from "../graphql-types"
 import { rhythm } from "../utils/typography"
 
-// from App.tsx
-
-// App.jsx-END
-
-const StyledLink = styled(FadeLink)`
-  box-shadow: none;
-`
+interface IAppState {
+    fetching: boolean;
+    address: string;
+    web3: any;
+    provider: any;
+    connected: boolean;
+    chainId: number;
+    networkId: number;
+    assets: IAssetData[];
+    showModal: boolean;
+    pendingRequest: boolean;
+    result: any | null;
+  }
+  
+const INITIAL_STATE: IAppState = {
+fetching: false,
+address: "",
+web3: null,
+provider: null,
+connected: false,
+chainId: 1,
+networkId: 1,
+assets: [],
+showModal: false,
+pendingRequest: false,
+result: null
+};
 
 const Title = styled.h3`
   margin-bottom: ${rhythm(1 / 4)};
@@ -55,11 +71,6 @@ const BlogIndex = (props: Props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
-      <SuperWeb3 />
       <Bio />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!
@@ -71,7 +82,7 @@ const BlogIndex = (props: Props) => {
         return (
           <div key={slug}>
             <Title>
-              <StyledLink to={slug}>{title}</StyledLink>
+              {title}
             </Title>
             <small>{frontmatter.date}</small>
             <p

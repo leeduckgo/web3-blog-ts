@@ -2,7 +2,7 @@ import { PageRendererProps } from "gatsby"
 import React, { ReactNode } from "react"
 import styled from "styled-components"
 import { rhythm, styledScale } from "../utils/typography"
-import { FadeLink } from "./link"
+// import { FadeLink } from "./link"
 
 interface Props extends PageRendererProps {
   title: string
@@ -20,11 +20,11 @@ const StyledH3 = styled.h3`
   margin-top: 0;
 `
 
-const StyledLink = styled(FadeLink)`
-  box-shadow: none;
-  color: inherit;
-  text-decoration: none;
-`
+// const StyledLink = styled(FadeLink)`
+//   box-shadow: none;
+//   color: inherit;
+//   text-decoration: none;
+// `
 
 const Content = styled.div`
   margin-left: auto;
@@ -43,7 +43,7 @@ export const Layout = (props: Props) => {
     <Content>
       <header>
         <HeaderTitle>
-          <StyledLink to={`/`}>{title}</StyledLink>
+          {title}
         </HeaderTitle>
       </header>
       <main>{children}</main>
