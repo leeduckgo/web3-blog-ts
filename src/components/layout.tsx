@@ -41,11 +41,11 @@ export const Layout = (props: Props) => {
 
   return (
     <Content>
-      <header>
+      {/* <header>
         <HeaderTitle>
           {title}
         </HeaderTitle>
-      </header>
+      </header> */}
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
