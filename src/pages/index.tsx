@@ -6,6 +6,7 @@ import { Bio } from "../components/bio"
 import { Layout } from "../components/layout"
 import { FadeLink } from "../components/link"
 import { SEO } from "../components/seo"
+import BlogTitle from "../components/BlogTitle"
 import SuperWeb3 from "../components/SuperWeb3"
 import { MarkdownRemark } from "../graphql-types"
 import { rhythm } from "../utils/typography"
@@ -60,6 +61,7 @@ const BlogIndex = (props: Props) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <SuperWeb3 />
+      <BlogTitle />
       <Bio />
       {posts.map(({ node }: { node: MarkdownRemark }) => {
         const frontmatter = node!.frontmatter!

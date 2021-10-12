@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Web3 from "web3";
+// import Web3 from "web3";
 import { convertUtf8ToHex } from "@walletconnect/utils";
 
 import Web3Modal from "web3modal";
