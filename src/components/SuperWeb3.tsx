@@ -636,12 +636,6 @@ class SuperWeb3 extends React.Component<any, any> {
       //   </Modal>
       // </SLayout>
       <Column maxWidth={1000} spanHeight>
-        <Header
-            connected={connected}
-            address={address}
-            chainId={chainId}
-            killSession={this.resetApp}
-        />
         <SContent>
             <ConnectButton onClick={this.onConnect} />
         </SContent>
