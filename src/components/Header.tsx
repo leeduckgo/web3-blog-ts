@@ -90,7 +90,7 @@ const Header = (props: IHeaderProps) => {
           <p>{chainData.name}</p>
         </SActiveChain>
       ) : (
-        <Banner />
+        <p />
       )}
       {address && (
         <SActiveAccount>
