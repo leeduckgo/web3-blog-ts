@@ -53,7 +53,7 @@ typings/
 
 # dotenv environment variables file
 .env
-
+.envrc
 # gatsby files
 .cache/
 public
@@ -69,3 +69,5 @@ yarn-error.log
 .yarn-integrity
 
 *.idea
+
+

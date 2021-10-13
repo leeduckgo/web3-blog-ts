@@ -162,16 +162,15 @@ class SuperWeb3 extends React.Component<any, any> {
     this.state = {
       ...INITIAL_STATE
     };
+  }
 
+  public componentDidMount() {
     this.web3Modal = new Web3Modal({
       network: this.getNetwork(),
       cacheProvider: true,
       providerOptions: this.getProviderOptions()
     });
     console.log("web3Modal", this.web3Modal);
-  }
-
-  public componentDidMount() {
     if (this.web3Modal.cachedProvider) {
       this.onConnect();
     }
