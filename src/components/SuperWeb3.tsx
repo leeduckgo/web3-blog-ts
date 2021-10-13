@@ -50,11 +50,12 @@ const SContent = styled(Wrapper)`
   width: 100%;
   height: 100%;
   padding: 0 16px;
+  min-height: 100px;
 `;
 
 const SContainer = styled.div`
   height: 100%;
-  min-height: 200px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -643,7 +644,11 @@ class SuperWeb3 extends React.Component<any, any> {
             killSession={this.resetApp}
         />
         <SContent>
-            <ConnectButton onClick={this.onConnect} />
+            { connected ? (
+                <p/>
+            ) : (
+                <ConnectButton onClick={this.onConnect} />
+            )}
         </SContent>
         </Column>
       
