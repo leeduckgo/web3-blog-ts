@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/web3-blog-ts',
   siteMetadata: {
     title: `Gatsby Starter Blog supported web3.0`,
     author: `leeduckgo& Kyle Mathews`,

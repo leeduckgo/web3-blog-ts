@@ -43,6 +43,7 @@
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
+    "electron": "^15.1.2",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -104,6 +105,7 @@
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "^4.1.14",
     "@types/typography": "^0.16.2",
+    "gh-pages": "^3.2.3",
     "graphql": "^14.2.1",
     "prettier": "^1.17.0",
     "tslint": "^5.16.0",
@@ -132,6 +134,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "tsc": "tsc --noEmit",
     "lint": "tslint --project .",
-    "gql-codegen": "graphql-codegen --config codegen.yml"
+    "gql-codegen": "graphql-codegen --config codegen.yml",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
